@@ -16,7 +16,6 @@ let items = require("./etsy-items.js");
 //Convert all prices to USD
 let pricesInUSD = items.map(object => {
   if (object.currency_code === "GBP"){
-    //let currencyHolder = { object.price: oj}
     return Object.assign({},object,{
       price: object.price / .80,
       currency_code: "USD converted from GBP"}
